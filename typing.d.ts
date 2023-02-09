@@ -1,5 +1,5 @@
 export type accessToken = {
-    accessToken: number,
+    accessToken ? : number,
 }
 export type space = {
     space ? : number,
