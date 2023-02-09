@@ -21,7 +21,7 @@ export default function about({pages}: any) {
   return (
     <div>
         
-        {pages.map(page => (
+        {pages.map((page: { sys: { id: React.Key | null | undefined } }) => (
             <AboutLayout key={page.sys.id} page={page}/>
         ))}
     </div>
