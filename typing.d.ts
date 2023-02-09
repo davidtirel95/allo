@@ -2,7 +2,7 @@ export type accessToken = {
     accessToken: number,
 }
 export type space = {
-    space: number,
+    space ? : number,
 }
 export type pages = {
     pages: string,
