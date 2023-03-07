@@ -8,3 +8,6 @@ export type pages = {
     pages: string,
 }
 
+export type document = {
+    document ? : any,
+}

@@ -1,6 +1,8 @@
 import React from 'react'
 import { createClient } from 'contentful'
 import EnContactLayout from '../components/EnContactLayout'
+import EnNavbar from '../components/EnNavbar'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -20,10 +22,14 @@ export default function encontact ({encontacts}: any) {
 
   return (
     <div>
-        
+        <EnNavbar />
+        <div>
+        <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>contact</h2> 
+        </div>
         {encontacts.map(enContact => (
             <EnContactLayout key={enContact.sys.id} enContact={enContact}/>
         ))}
+        <Footer />
     </div>
   )
 }

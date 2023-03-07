@@ -1,6 +1,8 @@
 import React from 'react'
 import { createClient } from 'contentful'
 import EnNewsLayout from '../components/EnNewsLayout'
+import EnNavbar from '../components/EnNavbar'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -20,10 +22,14 @@ export default function enNews({ennewss}: any) {
 
   return (
     <div>
-        
+         <EnNavbar />
+         <div>
+        <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>news</h2> 
+        </div>
         {ennewss.map(enNews => (
             <EnNewsLayout key={enNews.sys.id} enNews={enNews}/>
         ))}
+        <Footer />
     </div>
   )
 }

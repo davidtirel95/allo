@@ -2,6 +2,7 @@ import React from 'react'
 import { createClient } from 'contentful'
 import NewsLayout from '../components/NewsLayout'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -25,10 +26,13 @@ export default function news({newss}: any) {
     <>
     <Navbar />
     <div>
-        
+    <div>
+        <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>news</h2> 
+        </div>
         {newss.map(news => (
             <NewsLayout key={news.sys.id} news={news}  />
         ))}
+    <Footer />
     </div>
     </>
   )

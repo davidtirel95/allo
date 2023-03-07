@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className='w-full h-30 pt-5 shadow-sm z-[100]' >  
-        <div className='flex justify-between items-center w-100 h-full  px-2 2xl:px-16 '> 
+        <div className='flex justify-between items-center w-100 h-full px-2 2xl:px-16'> 
        <Link href='/'><Image src={bgImg} alt='/' width='125' height='50' /></Link>
         <p className='uppercase font-bold italic'>allôsunshine</p>
         <div>
@@ -73,7 +73,7 @@ const Navbar = () => {
                 <li className='py-4 text-sm'>contact</li>
                 </Link>
               </ul>
-              <div className='pt-40'>
+              <div className='pt-20'>
                 <p className='uppercase tracking-widest'>Lets connect</p>
                 <div className='flex items-center justify-between my-4 w-full sm:w-[80%]'>
                   <div className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300'>

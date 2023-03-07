@@ -1,6 +1,8 @@
 import React from 'react'
 import { createClient } from 'contentful'
 import EnJoinLayout from '../components/EnJoinLayout'
+import EnNavbar from '../components/EnNavbar'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -20,10 +22,11 @@ export default function enjoin ({enjoins}: any) {
 
   return (
     <div>
-        
+        <EnNavbar />  
         {enjoins.map(enJoinPageTitle => (
             <EnJoinLayout key={enJoinPageTitle.sys.id} enJoinPageTitle={enJoinPageTitle}/>
         ))}
+        <Footer />
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react'
 import { createClient } from 'contentful'
 import ContactLayout from '../components/ContactLayout'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
 
 export async function getStaticProps() {
     const client = createClient({
@@ -20,10 +22,14 @@ export default function contact ({contacts}: any) {
 
   return (
     <div>
-        
+        <Navbar />
+        <div>
+        <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>contact</h2> 
+        </div>
         {contacts.map(contact => (
             <ContactLayout key={contact.sys.id} contact={contact}/>
         ))}
+        <Footer />
     </div>
   )
 }
