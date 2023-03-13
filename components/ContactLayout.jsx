@@ -26,7 +26,7 @@ export default function ContactLayout({ contact }) {
               <div className='flex justify-center items-center pb-3'>
               <AiOutlineMail size={'25px'} />
 
-              <CopyToClipboard text={value}
+              <CopyToClipboard text={ 'contact@allosunshine.com'}
               onCopy={() => setCopied(true)} 
               >
               <div className='pl-2 cursor-copy '
@@ -42,7 +42,7 @@ export default function ContactLayout({ contact }) {
             </div>
             <div className='flex justify-center items-center pb-3'>
               <AiOutlineInstagram  size={'25px'}/> 
-              <Link href='/'>
+              <Link href='https://www.instagram.com/allosunshine.xyz/'>
               <div className='pl-2'>{ instagramId }</div>
               </Link>
             </div>
