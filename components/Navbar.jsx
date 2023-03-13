@@ -20,9 +20,9 @@ const Navbar = () => {
         <Link href='/'><Image src={bgImg} alt='/' width='125' height='50' /></Link>
         <p className='uppercase font-bold italic'>allôsunshine</p>
         <div>
-          <ul className='hidden md:flex '>
+          <ul className='hidden md:flex'>
             <Link href='/about'>
-             <li className='ml-10 text-sm uppercase '>about</li>
+             <li className='ml-10 text-sm uppercase hover:border-b'>about</li>
             </Link>
             <Link href='/news'>
              <li className='ml-10 text-sm uppercase hover:border-b'>news</li>

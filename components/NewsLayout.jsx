@@ -16,7 +16,7 @@ if (typeof window ==! "undefined") {
   <div className='flex mx-auto justify-center items-center'>
        
                
-                <div className="border-2 rounded border-black p-0.5 mb-10 cursor-move">
+                <div className="border-2 rounded border-black p-0.5 mb-10">
                 <h2 className="tracking-widest" >{ newsContentTitle }</h2>
                 <div>
                     { formatRelativeDateTime(newsDate) }

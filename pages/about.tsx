@@ -20,6 +20,7 @@ export default function about({pages}: any) {
     console.log(pages)
 
   return (
+    <>
     <div>
         <Navbar />
         <div>
@@ -30,5 +31,6 @@ export default function about({pages}: any) {
         ))}
         <Footer />
     </div>
+    </>
   )
 }

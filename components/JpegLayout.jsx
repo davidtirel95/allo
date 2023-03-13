@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import Image from 'next/image'
 import Draggable from 'react-draggable'
@@ -11,6 +11,7 @@ import interact from 'interactjs'
 export default function JpegLayout({ jpeg }) {
 
 const { title, jpegDate, frame, }  =  jpeg.fields;
+
 
   
 /* if (typeof window !== "undefined") { 
@@ -59,26 +60,30 @@ const { title, jpegDate, frame, }  =  jpeg.fields;
     }
   }
   } */
+  
  
    
   
   return (
     <>
-    
+      
           <div className='max-w-[1240px] max-h-[1240px] w-full flex'> 
-           <div className='m-auto' >   
-         
-              <Draggable className='md:disabled:true'>
+           <div className='m-auto'  >  
+            
+              <Draggable >
                <Image 
                 src= {'https:' + frame.fields.file.url }
                 width={ frame.fields.file.details.image.width }
                 height={ frame.fields.file.details.image.height }
                 alt='/draggit'   
-                className='cursor-move rounded-lg hover:drop-shadow-xl' draggable="true"          
+                className='cursor-move rounded-lg hover:drop-shadow-xl' 
+                draggable="true"            
                 />  
               </Draggable>    
               </div>
               </div>
+              
+             
              
             
                               

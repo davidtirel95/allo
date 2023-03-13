@@ -1,11 +1,17 @@
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-
+import Link from 'next/link'
+import {AiOutlineInstagram, AiOutlineMail} from 'react-icons/ai'
+import { useState } from 'react'
+import {CopyToClipboard} from 'react-copy-to-clipboard'
 
 export default function ContactLayout({ contact }) {
     
   const { contactPageTitle, email, instagramId, contactDescription } =  contact.fields
-    
+  const [value, setValue] = useState('')  
+  const [copied, setCopied] = useState(false)
+
+
   return (
     <>
 
@@ -14,12 +20,33 @@ export default function ContactLayout({ contact }) {
         {/* <div className='pt-30 max-w-[50%] m-auto'> */}
         <div className='max-w-[1240px] max-h-[1240px] w-full flex mx-auto'>
           <div className='max-w-[50%] max-h-[50%] m-auto'>
-      
-            <div>{ email }</div>
-            <div>{ instagramId }</div>
-        <div className='leading-8'>
-          {documentToReactComponents(contactDescription)}
-          </div>
+            <div className='leading-8 pb-10'>
+            {documentToReactComponents(contactDescription)}
+            </div>
+              <div className='flex justify-center items-center pb-3'>
+              <AiOutlineMail size={'25px'} />
+
+              <CopyToClipboard text={value}
+              onCopy={() => setCopied(true)} 
+              >
+              <div className='pl-2 cursor-copy '
+              value={value}
+              onChange={({ target : { value } }) => setValue(value)}
+              >
+                 contact@allosunshine.com
+              {/* { email }       */}
+              </div>
+              </CopyToClipboard>
+              { copied ? <span className='text-cyan   pl-3'>Copied!</span> : null }
+             
+            </div>
+            <div className='flex justify-center items-center pb-3'>
+              <AiOutlineInstagram  size={'25px'}/> 
+              <Link href='/'>
+              <div className='pl-2'>{ instagramId }</div>
+              </Link>
+            </div>
+          
         </div>
         </div> 
         </div>

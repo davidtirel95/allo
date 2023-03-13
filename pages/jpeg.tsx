@@ -35,8 +35,9 @@ export default function jpeg({jpegs}: any) {
   }
 
   return (
+    <>
+    <Navbar />
     <div>
-        <Navbar />
         <div>
         <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>jpeg</h2> 
         </div>
@@ -44,9 +45,10 @@ export default function jpeg({jpegs}: any) {
             {jpegs.map(jpeg => (
             <JpegLayout key={jpeg.sys.id} jpeg={jpeg} />
         ))}
-
         </div>
-        <Footer />
+        
+    <Footer />
     </div>
+    </>
   )
 }
