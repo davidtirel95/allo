@@ -15,6 +15,7 @@ const Navbar = () => {
   } 
 
   return (
+    <>
     <div className='w-full h-30 pt-5 shadow-sm z-[100]' >  
         <div className='flex justify-between items-center w-100 h-full px-2 2xl:px-16'> 
        <Link href='/'><Image src={bgImg} alt='/' width='125' height='50' /></Link>
@@ -91,8 +92,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
-    
+  
+    </>
   )
 }
 export default Navbar
