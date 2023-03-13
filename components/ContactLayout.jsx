@@ -33,7 +33,7 @@ export default function ContactLayout({ contact }) {
               value={value}
               onChange={({ target : { value } }) => setValue(value)}
               >
-                 contact@allosunshine.com
+              contact@allosunshine.com
               {/* { email }       */}
               </div>
               </CopyToClipboard>
