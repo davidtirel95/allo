@@ -20,7 +20,7 @@ export async function getStaticProps() {
 export default function enAbout({enAbouts}:any) {
     console.log(enAbouts)
   return (
-    <div>
+    <>
         <EnNavbar />
         <div>
         <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>about</h2> 
@@ -29,6 +29,7 @@ export default function enAbout({enAbouts}:any) {
             <EnAboutLayout key={enAbout.sys.id} enAbout={enAbout} />
         ))}
         <Footer />
-    </div>
+        </>
+   
   )
 }
