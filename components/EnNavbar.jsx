@@ -27,7 +27,7 @@ const EnNavbar = () => {
             <Link href='/ennews'>
              <li className='ml-10 text-sm uppercase hover:border-b'>news</li>
             </Link>
-            <Link href='/jpeg'>
+            <Link href='/enjpeg'>
              <li className='ml-10 text-sm uppercase hover:border-b'>jpeg</li>
             </Link>
             <Link href='/enjoin'>
@@ -63,7 +63,7 @@ const EnNavbar = () => {
                 <Link href='/ennews'>
                 <li className='py-4 text-sm'>news</li>
                 </Link>
-                <Link href='/jpeg'>
+                <Link href='/enjpeg'>
                 <li className='py-4 text-sm'>jpeg</li>
                 </Link>
                 <Link href='/enjoin'>

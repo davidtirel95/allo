@@ -5,11 +5,15 @@ import Link from 'next/link'
 import {AiOutlineMenu, AiOutlineClose ,AiOutlineMail} from 'react-icons/ai'
 import {FaDiscord, FaInstagram, } from 'react-icons/fa'
 
+import { useTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from '@heroicons/react/solid'
+
 
 const Navbar = () => {
 
-  const [nav, setNav] = useState(false)
+  
 
+  const [nav, setNav] = useState(false)
   const handleNav = () => {
     setNav(!nav);
   } 

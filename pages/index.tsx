@@ -4,9 +4,34 @@ import { Inter } from '@next/font/google'
 import  bgImg  from '../public/allosunshine.png'
 import Link from 'next/link'
 import Footer from '@/components/Footer'
-
+import { useTheme } from 'next-themes'
+import { MoonIcon, SunIcon } from '@heroicons/react/solid'
+import { useState, useEffect, } from 'react'
 const inter = Inter({ subsets: ['latin'] })
+
+
 export default function Home() {
+
+  const { systemTheme, theme, setTheme } = useTheme()
+  const [ mounted, setMounted ] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  const renderThemeChanger = () => {
+    if(!mounted) return null; 
+    const currentTheme = theme === 'system' ? systemTheme : theme;
+    
+    if(currentTheme === 'dark') {
+      return (
+        <SunIcon className='w-7 h-7' role='button' onClick={() => setTheme('light')} />
+      )
+    } else
+    return (
+      <MoonIcon className='w-7 h-7' role='button' onClick={() => setTheme('dark')} />
+    )
+  }
   return (
     <>
       <Head>
@@ -17,7 +42,7 @@ export default function Home() {
       
       </Head>
       
-      <div className='flex items-center justify-center h-screen'>
+      <div className='flex items-center justify-center h-screen dark:border-gray-700'>
         {/*overlay*/} 
         
         <div/>
@@ -31,6 +56,9 @@ export default function Home() {
           <Link href='/about'>
           <button>FR</button>
           </Link>
+           </div>
+           <div className='flex items-center justify-center text-center ease-in duration-500'>
+           {renderThemeChanger()}
            </div>
         </div>
         <Footer />

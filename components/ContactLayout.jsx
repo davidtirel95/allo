@@ -33,11 +33,14 @@ export default function ContactLayout({ contact }) {
               value={value}
               onChange={({ target : { value } }) => setValue(value)}
               >
-              contact@allosunshine.com
-              {/* { email }       */}
+             
+              { email }     
               </div>
               </CopyToClipboard>
-              { copied ? <span className='text-cyan   pl-3'>Copied!</span> : null }
+              <div className='text-violet-400 bold pl-3'>
+              { copied ? <span >Copied!</span> : null }
+              </div>
+              
              
             </div>
             <div className='flex justify-center items-center pb-3'>

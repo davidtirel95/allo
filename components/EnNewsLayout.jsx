@@ -16,7 +16,7 @@ export default function NewsLayout({ enNews }) {
         <div className='max-w-[1240px] max-h-[1240px] w-full flex mx-auto'>
           <div className='max-w-[50%] max-h-[50%] m-auto'>
            <div className="w-full flex mx-auto justify-center items-center"> 
-              <div className=" border-2 rounded border-black p-0.5">
+              <div className=" border-2 rounded border-black p-0.5  dark:border-white">
                 <h2 className='tracking-widest'>{ enNewsContent }</h2>
                 <div>
                     { formatRelativeDateTime(enNewsDate) }
