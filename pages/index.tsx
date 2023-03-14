@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Footer from '@/components/Footer'
 import { useTheme } from 'next-themes'
 import { MoonIcon, SunIcon } from '@heroicons/react/solid'
-import { useState, useEffect, } from 'react'
+import { useState, useEffect } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 

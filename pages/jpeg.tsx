@@ -3,7 +3,7 @@ import { createClient } from 'contentful'
 import JpegLayout from '../components/JpegLayout'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import interact from 'interactjs'
+
 
 export async function getStaticProps() {
   
@@ -40,15 +40,17 @@ export default function jpeg({jpegs}: any) {
     <div>
         <div>
         <h2 className= 'w-full pt-20 pb-20 text-center tracking-widest'>jpeg</h2> 
-        </div>
-        <div className='grid xs:grid-cols-3 xl:gap-x-3 gap-y-3 px-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3'>
+        </div>     
+         <div className='grid xs:grid-cols-3 xl:gap-x-3 gap-y-3 px-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3'> 
+           {/* <div>  */}
             {jpegs.map(jpeg => (
             <JpegLayout key={jpeg.sys.id} jpeg={jpeg} />
         ))}
         </div>
+        </div>
         
     <Footer />
-    </div>
+    
     </>
   )
 }

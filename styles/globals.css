@@ -11,4 +11,21 @@ html {
     body {
         @apply bg-gray-50 text-gray-900 dark:bg-gray-600 dark:text-gray-100 dark:border-white
     }
+
+}
+.container {
+    background: yellow;
+    position: relative;
+    height: 800px;
+    width: 800px;
+
+}
+
+.box {
+    position: absolute;
+    top:0;
+    left: 0;
+    background: red;
+    height: 200px;
+    width: 200px;
 }
